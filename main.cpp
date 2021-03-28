@@ -7,6 +7,7 @@ double check(){
     double y;
     do
     {
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
         cin.clear();
         cin.sync();
         cin>>y;
@@ -14,7 +15,6 @@ double check(){
             cout<<"That is not number!\n";
         else if ( y <= 0 )
             cout << "That is not positive number!\n";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }while(cin.fail()||y<=0||!cin.good());
     return y;
 }
